@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 18px;
+	color: #000;
+	line-height: 2;
+}
+
+
+header{
+	position: relative;
+}
+
+h1{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#days{
+	padding: 170px 0;
+	text-align: center;
+	color: #fff;
+	background: #e60012;
+}
+
+#days p:first-child{
+	margin-bottom: 80px;
+}
+
+
+h2{
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 3em;
+}
+
+h2 span{
+	display: block;
+	font-family: "Bangers", system-ui;
+	font-size: 80px;
+	line-height: 1;
+}
+
+
+.inner{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.inner_in{
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+
+img{
+	max-width: 100%;
+}
+
+
+
+#information{
+	padding: 200px 0;
+}
+
+#information dl{
+	padding: 1em;
+	display: flex;
+	border-bottom: 1px #dadada solid;
+}
+
+#information dt{
+	width: 20%;
+	color: #e60012;
+	font-weight: bold;
+}
+
+
+
+#event{
+	padding: 170px 0 90px;
+	background: #ccb726;
+}
+
+#event .col{
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	margin-bottom: 80px;
+}
+
+#event .col.reverse{
+	flex-direction: row-reverse;
+}
+
+
+#event .txt{
+	width: 640px;
+	padding: 80px 50px 0 50px;
+}
+
+
+#event figure{
+	width: 460px;
+	line-height: 1;
+}
+
+#event figure img{
+	vertical-align: bottom;
+}
+
+
+
+#event h3{
+	font-size: 24px;
+	font-weight: bold;
+	color: #ccb726;
+	line-height: 1.4;
+	margin-bottom: 1em;
+}
+#event h3.event_title{
+	color: #e60012;
+}
+
+#event h3 span{
+	display: block;
+	font-family: "Bangers", system-ui;
+	font-size: 80px;
+	line-height: 1;
+}
+
+.btn a{
+	margin-top: 1em;
+	display: inline-block;
+	padding: 20px 80px;
+	color: #fff;
+	background: #000;
+	text-decoration: none;
+	border-radius: 7px;
+}
+
+#artist{
+	color: #fff;
+	padding: 120px 0;
+	background: url("../images/bg_artist.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+#artist h3{
+	color: #edd111;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#artist p{
+	margin-bottom: 2em;
+}
+
+
+#access{
+	padding: 80px 0;
+}
+
+#access .inner_in{
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.gmapBtn a{
+	display: inline-block;
+	padding: 20px 80px;
+	color: #fff;
+	background: #e60012;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+.gmapBtn a:hover{
+	opacity: 0.7;
+}
+
+
+#ticket{
+	margin-bottom: 160px;
+}
+
+#ticket p{
+	margin-top: -150px;
+	padding: 100px 0 30px;
+	text-align: center;
+	background: #eeedeb;
+}
+
+
+
+#about{
+	background: #ccb726 url("../images/ft_logo.png") no-repeat center center;
+}
+
+#about .inner{
+	display: flex;
+	padding: 100px 0 90px;
+}
+
+#about h2{
+	text-align: left;
+	margin-right: 130px;
+}
+
+#about h3{
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+#about dl{
+	margin-top: 1em;
+}
+
+#about dd{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+
+footer{
+	background: #000;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	padding: 1em 0;
+}
+
+
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position:fixed;
+	z-index: -1;
+	opacity: 0;/*はじめは透過0*/
+    /*ナビの位置と形状*/
+	top:0;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+	background:#ccb726;
+    /*動き*/
+	transition: all 0.3s;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive{
+	opacity: 1;
+	z-index:999;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav #g-nav-list{
+    display: none;
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+}
+
+#g-nav.panelactive #g-nav-list{
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.g-nav-logo{
+	width: 45%;
+}
+
+.g-nav-logo img{
+	max-width: 100%;
+}
+
+
+
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: left;
+	font-family: "Bangers", system-ui;
+	font-size: 1.7em;
+}
+
+#g-nav li a{
+	color: #e60012;
+	text-decoration: none;
+	padding: 0px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+#g-nav li a:before{
+	content: "ー";
+	margin-right: 10px;
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:10px;
+	right: 30px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #e60012;
+  	width: 35px;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 35px;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 35px;
+}
+
+
+
+
+/* Google Mapを囲う要素 */
+.map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 75%; /* 比率を4:3に固定 */
+}
+ 
+/* Google Mapのiframe */
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+

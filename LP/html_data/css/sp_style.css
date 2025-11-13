@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (min-width:1px) and (max-width:767px){
+	
+	.inner{
+		width: 90%;
+	}	
+	
+	.inner_in{
+		width: 90%;
+	}
+	
+#days{
+	padding: 100px 5%;
+	}
+	
+	
+h2 span{
+	font-size: 60px;
+	}
+	
+#information dl{
+	display: block;
+	}
+	
+#information dt{
+	width: inherit;
+	}
+	
+#event .col{
+	display: block;
+	}
+	
+	
+#event .txt{
+	width: 100%;
+	padding: 10%;
+	box-sizing: border-box;
+}
+
+#event figure{
+	width: 100%;
+}
+
+#event h3 span{
+	font-size: 50px;
+	}
+	
+.btn a{
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+}	
+	
+
+#access .inner_in{
+		display: block;
+}	
+
+	
+	.gmapBtn a{
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+		margin-top: 20px;
+	}	
+	
+	
+	#about .inner{
+		display: block;
+		
+	}	
+	
+	#about h2{
+		margin-right: 0;
+	}
+	
+	#g-nav.panelactive #g-nav-list{
+		display: block;
+		
+	}
+	
+	.g-nav-logo{
+		width: 70%;
+		margin:  0 auto 3em;
+		
+	}
+	
+	#g-nav li{
+		font-size: 1.4em;
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
